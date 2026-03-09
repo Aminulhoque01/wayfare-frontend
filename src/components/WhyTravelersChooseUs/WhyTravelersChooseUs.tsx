@@ -89,7 +89,7 @@ type CardProps = {
 function FeatureCard({ icon, title, desc }: CardProps) {
   return (
     <div className="flex items-start gap-4 p-5 bg-[#F2F2F2] rounded-xl shadow-sm border">
-      <div className="p-3 bg-gray-100 rounded-lg text-gray-700">{icon}</div>
+      <div className="p-3 bg-gray-200 rounded-lg text-gray-700 ">{icon}</div>
 
       <div>
         <h4 className="font-semibold text-lg">{title}</h4>
