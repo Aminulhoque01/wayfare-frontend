@@ -27,14 +27,14 @@ const tours = [
 ];
 
 export default function TourSlider() {
-  const [liked, setLiked] = useState({});
+  const [liked, setLiked] = useState<Record<number, boolean>>({});
 
-  const toggleLike = (index:any) => {
+    const toggleLike = (index: number) => {
     setLiked((prev) => ({
-      ...prev,
-      [index]: !prev[index],
+        ...prev,
+        [index]: !prev[index],
     }));
-  };
+    };
 
   return (
     <section className="py-16 px-6 bg-gray-50">

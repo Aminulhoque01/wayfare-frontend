@@ -7,13 +7,28 @@ import "swiper/css";
 import "swiper/css/autoplay";
 
 import Navbar from "../Navbar/Navbar";
+import { Search } from "lucide-react";
+import { useState } from "react";
 
 export default function HeroSection() {
+  
   const images = [
     "/assest/heroImage/hero-banner1.jpg",
     "/assest/heroImage/hero-banner2.jpg",
     "/assest/heroImage/hero-banner3.jpg",
   ];
+ const [people, setPeople] = useState(0);
+    
+
+  const increase = () => {
+    setPeople(people + 1);
+  };
+
+  const decrease = () => {
+    if (people > 1) {
+      setPeople(people - 1);
+    }
+  };
 
   return (
     <section className="relative w-full h-screen flex flex-col">
@@ -61,13 +76,65 @@ export default function HeroSection() {
       {/* Search Section */}
       <div className="absolute bottom-6 md:bottom-10 w-full flex justify-center px-4 z-20">
         {/* Desktop Search */}
-        <div className="hidden md:flex bg-white rounded-full shadow-lg items-center p-4 gap-4 max-w-5xl w-full">
-          <input type="text" placeholder="From" className="flex-1 outline-none px-2" />
-          <input type="text" placeholder="To Destination" className="flex-1 outline-none px-2" />
-          <input type="date" className="flex-1 outline-none px-2" />
-          <input type="text" placeholder="Trip Duration" className="flex-1 outline-none px-2" />
-          <input type="number" placeholder="People" className="w-20 outline-none px-2" />
-          <button className="bg-teal-600 text-white px-6 py-3 rounded-full">Search</button>
+       <div className="hidden md:flex items-center bg-white rounded-full shadow-xl px-6 py-3 gap-6 max-w-6xl ">
+
+          {/* From */}
+          <div className="flex flex-col border-r pr-6">
+            <span className="text-md text-gray-500">From</span>
+            <select className="outline-none font-medium">
+              <option>Berlin</option>
+              <option>London</option>
+              <option>Tokyo</option>
+            </select>
+          </div>
+
+          {/* To Destination */}
+          <div className="flex flex-col border-r pr-6">
+            <span className="text-md text-gray-500">To Destination</span>
+            <select className="outline-none font-medium">
+              <option>Paris</option>
+              <option>Rome</option>
+              <option>Dubai</option>
+            </select>
+          </div>
+
+          {/* Departure */}
+          <div className="flex flex-col border-r pr-6">
+            <span className="text-md text-gray-500">Departure Date</span>
+            <input
+              type="date"
+              defaultValue="2026-03-10"
+              className="outline-none font-medium"
+            />
+          </div>
+
+          {/* Trip Duration */}
+          <div className="flex flex-col border-r pr-6">
+            <span className="text-md text-gray-500">Trip Duration</span>
+            <select className="outline-none font-medium">
+              <option>3-5 Days</option>
+              <option>7 Days</option>
+              <option>10 Days</option>
+            </select>
+          </div>
+
+          {/* People */}
+        <div className="flex flex-col pr-4">
+          <span className="text-md text-gray-500">People</span>
+          <div className="flex items-center gap-3 font-medium">
+            <button onClick={decrease} className="text-lg px-2">-</button>
+            <span>{people}</span>
+            <button onClick={increase} className="text-lg px-2">+</button>
+          </div>
+        </div>
+
+          {/* Search Button */}
+          <div className="flex justify-end">
+            <button className="flex  items-center gap-2 bg-teal-700 text-white px-6 py-3 rounded-full hover:bg-teal-800 transition">
+            <Search size={18} />
+            Search
+          </button>
+          </div>
         </div>
 
         {/* Mobile Search */}
@@ -93,12 +160,14 @@ export default function HeroSection() {
             </select>
           </div>
           <div className="border-t pt-3 flex justify-between items-center">
-            <p className="text-sm text-gray-500">People</p>
-            <div className="flex items-center gap-3">
-              <button className="w-8 h-8 bg-gray-200 rounded-full">-</button>
-              <span>2</span>
-              <button className="w-8 h-8 bg-gray-200 rounded-full">+</button>
+            <div className="flex flex-col pr-4">
+            <span className="text-md text-gray-500">People</span>
+            <div className="flex items-center gap-3 font-medium">
+              <button onClick={decrease} className="text-lg px-2">-</button>
+              <span>{people}</span>
+              <button onClick={increase} className="text-lg px-2">+</button>
             </div>
+          </div>
           </div>
           <button className="w-full bg-teal-600 text-white py-3 rounded-xl">Search</button>
         </div>
