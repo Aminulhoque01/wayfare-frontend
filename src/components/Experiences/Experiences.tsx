@@ -60,7 +60,7 @@ export default function ExperiencesSlider() {
         {/* Header */}
         <div className="text-center mb-12">
 
-          <span className="bg-blue-100 text-blue-600 px-4 py-1 rounded-full text-sm">
+          <span className="bg-[#D2E7EC] text-[#279bb8] px-4 py-1 rounded-full text-md">
             Popular Experiences
           </span>
 
