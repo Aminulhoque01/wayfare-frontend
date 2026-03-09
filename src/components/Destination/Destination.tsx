@@ -11,6 +11,7 @@ import japan from "../../../public/assest/destanis/japan.png"
 import canada from "../../../public/assest/destanis/canada.png"
 import iceland from "../../../public/assest/destanis/iceland.png"
 import { MdArrowOutward } from "react-icons/md";
+import { LuPackageOpen } from "react-icons/lu";
 
 const destinations = [
   {
@@ -98,9 +99,9 @@ export default function Destination() {
                 height={500}
                 className="object-cover w-full h-[500px] group-hover:scale-105 transition-transform duration-300"
               />
-              <div className="absolute top-3 left-3 bg-black/40 text-white text-xs px-2 py-1 rounded-full">
-                5+ Packages Available
-              </div>
+              <div className="absolute inset-0 flex items-center justify-center bg-[#9eacb16b]   text-white text-lg font-medium rounded-full w-60 h-12 mx-auto top-5">
+                <LuPackageOpen className="mr-2"/> 5+ Packages Available
+                </div>
               <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent p-4">
                 <h3 className="text-white text-lg font-semibold">{dest.name}</h3>
                 <p className="text-white text-sm">{dest.desc}</p>

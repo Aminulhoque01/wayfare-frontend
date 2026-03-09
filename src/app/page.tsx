@@ -2,6 +2,7 @@
 
 import Destination from "@/components/Destination/Destination";
 import HeroSection from "@/components/HeroSection/HeroSection";
+import WhyTravelersChooseUs from "@/components/WhyTravelersChooseUs/WhyTravelersChooseUs";
  
 
 
@@ -13,6 +14,7 @@ export default function Home() {
     <main>
       <HeroSection />
       <Destination/>
+      <WhyTravelersChooseUs/>
     </main>
   );
 }
