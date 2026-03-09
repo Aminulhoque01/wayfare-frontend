@@ -5,6 +5,11 @@ import ExperiencesSlider from "@/components/Experiences/Experiences";
 import HeroSection from "@/components/HeroSection/HeroSection";
 import WhyTravelersChooseUs from "@/components/WhyTravelersChooseUs/WhyTravelersChooseUs";
 import Travel from "./Travel/page";
+import TourSlider from "@/components/TourSlider/TourSlider";
+import TravelExperiences from "@/components/TravelExperiences/TravelExperiences";
+import Footer from "@/components/Footer/Footer";
+import Dream from "@/components/Dream/Dream";
+import FaqSection from "@/components/FaqSection/FaqSection";
  
 
 
@@ -19,6 +24,11 @@ export default function Home() {
       <WhyTravelersChooseUs/>
       <ExperiencesSlider/>
       <Travel/>
+      <TourSlider/>
+      <TravelExperiences/>
+      <FaqSection/>
+      <Dream/>
+      <Footer/>
     </main>
   );
 }

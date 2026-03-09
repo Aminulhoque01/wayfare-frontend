@@ -86,7 +86,7 @@ export default function Travel() {
   ];
 
   return (
-    <div className="min-h-screen bg-gray-50 py-10 px-5 md:px-20">
+    <div className="min-h-screen bg-gray-50 py-10 px-3 md:px-20">
       <h1 className="text-3xl font-bold text-center mb-10">
         Discover <span className="text-blue-500">trips</span> tailored to how you{" "}
         <span className="italic">love</span> to travel.
